@@ -1,4 +1,4 @@
-// Tutorial does not provide CMAKE, I only guess we have to import the my_tree.xml here ?
+// Tutorial does not provide CMAKE, I copied this from Github BT page, I only guess we have to import the my_tree.xml here ?
 
 cmake_minimum_required(VERSION 3.5)
 
