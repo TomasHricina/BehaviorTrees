@@ -1,4 +1,4 @@
-#include "behaviortree_cpp_v3/bt_factory.h"
+#include <behaviortree_cpp_v3/bt_factory.h>
 #include "dummy_nodes.h"
 
 class ApproachObject : public BT::SyncActionNode
@@ -20,20 +20,7 @@ class ApproachObject : public BT::SyncActionNode
 int main()
 {
     
-    BehaviorTreeFactory factory;  
-    //with no BT::, it produces this error:
-    //with no BT:: 
-    // error: ‘BehaviorTreeFactory’ was not declared in this scope; did you mean ‘BT::BehaviorTreeFactory’?
-    //  |     BehaviorTreeFactory factory;
-    //  |     ^~~~~~~~~~~~~~~~~~~
-    //  |     BT::BehaviorTreeFactory
-  
-    //with BT::BehaviorTreeFactory factory;
-    //t01_build_your_first_tree.cpp:26:13: error: parse error in template argument list
-    //  |     factory.registerNodeType<ApproachObject>("ApproachObject");
-    //  |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-    using namespace DummyNodes;
+    BT::BehaviorTreeFactory factory;  
 
     factory.registerNodeType<ApproachObject>("ApproachObject");
 
